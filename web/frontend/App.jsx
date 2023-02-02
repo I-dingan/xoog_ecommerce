@@ -15,21 +15,13 @@ export default function App() {
 
   return (
     <PolarisProvider>
-      <BrowserRouter>
-        <AppBridgeProvider>
-          <QueryProvider>
-            <NavigationMenu
-              navigationLinks={[
-                {
-                  label: "Page name",
-                  destination: "/pagename",
-                },
-              ]}
-            />
-            <Routes pages={pages} />
-          </QueryProvider>
-        </AppBridgeProvider>
-      </BrowserRouter>
-    </PolarisProvider>
+    <BrowserRouter>
+      <AppBridgeProvider>
+        <QueryProvider>
+          <Routes pages={pages} />
+        </QueryProvider>
+      </AppBridgeProvider>
+    </BrowserRouter>
+  </PolarisProvider>
   );
 }
